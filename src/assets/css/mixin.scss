@@ -1,0 +1,62 @@
+$red: #f25657;
+$bc: #fff;
+$fc: #fff;
+
+@mixin bis($url) {
+    background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// 全屏
+@mixin allCover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+// 居中
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin cl {
+    position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+// 宽高
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// 设置文字字号和颜色
+@mixin fc($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+// flex布局和子元素的对齐方式
+@mixin flexJustify($type: space-between) {
+    display: flex;
+    justify-content: $type;
+}
+
+// 顶线
+@mixin bt-1px($color: #dcdcdc){
+    border-top: 1px solid $color;
+}
+
