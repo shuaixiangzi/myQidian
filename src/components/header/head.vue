@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="filtrate">
-            <i class="iconfont iconiconfontzhizuobiaozhun023125"></i>
+            <icon-svg icon-class="iconiconfontzhizuobiaozhun023125"></icon-svg>
             <span class="filtrate_title">筛选</span>
         </div>
 
@@ -11,8 +11,8 @@
         </div>
 
         <div class="function">
-            <i class="iconfont iconsousuo"></i>
-            <i class="iconfont icongengduo more"></i>
+            <icon-svg icon-class="iconsousuo"></icon-svg>
+            <icon-svg icon-class="icongengduo"></icon-svg>
         </div>
     </header>
 </template>
@@ -47,6 +47,10 @@ export default {
             margin-left: 10px;
             vertical-align: top;
         }
+
+        .svg-icon{
+            color: #fff;
+        }
     }
 
     .title{
@@ -79,6 +83,18 @@ export default {
         }
         .more{
             margin-left: 50px;
+        }
+
+        .svg-icon{
+            color: #fff;
+            font-size: 20px;
+            margin-top: 5px;
+            margin-right: 72px;
+
+            &:last-child{
+                font-size: 16px;
+                margin-right: 0;
+            }
         }
     }
 }

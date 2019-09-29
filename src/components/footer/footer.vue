@@ -2,25 +2,25 @@
     <footer class="footer">
        <div class="nav_list">
            <div class="nav_icon active">
-               <i class="iconfont iconshu"></i>
-               <div>书架</div>
+                <icon-svg icon-class="iconshu"></icon-svg>
+                <div>书架</div>
            </div>
            <div class="nav_icon">
-               <i class="iconfont iconjingxuan"></i>
-               <div>精选</div>
+                <icon-svg icon-class="iconjingxuan-" ></icon-svg>
+                <div>精选</div>
            </div>
 
            <div class="activity">
-               <img src="../../assets/img/activity.png"/>
+                <img src="../../assets/img/activity.png"/>
            </div>
 
            <div class="nav_icon">
-               <i class="iconfont iconicon_faxian"></i>
-               <div>发现</div>
+                <icon-svg icon-class="iconfaxian" ></icon-svg>
+                <div>发现</div>
            </div>
            <div class="nav_icon">
-               <i class="iconfont iconwode1"></i>
-               <div>我</div>
+                <icon-svg icon-class="iconwode1" ></icon-svg>
+                <div>我</div>
            </div>
        </div>
     </footer>
@@ -46,13 +46,11 @@ export default {
         padding: 20px;
         .nav_icon{
             text-align: center;
-
-            i{
-                font-size: 28px;
-            }
+            font-size: 24px;
 
             &.active{
-                i,div{
+                color: $red;
+                div{
                     color: $red;
                 } 
             }
