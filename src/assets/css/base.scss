@@ -50,7 +50,7 @@ textarea { -webkit-appearance: none;}
 html,body{
     height: 100%;
     width: 100%;
-    background-color: #F5F5F5;
+    background-color: #FFF;
 }
 
 
@@ -97,6 +97,16 @@ html,body{
 
 .paddingTop{
     padding-top: 1.95rem;
+}
+
+.font-red{
+    color: #eb5153;
+}
+.font-black{
+    color: #474c52;
+}
+.font-grey{
+    color: #909090;
 }
 
 @keyframes backOpacity{

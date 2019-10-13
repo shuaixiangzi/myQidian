@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-    name:'headtop'
+    name:'bookListHead'
 }
 </script>
 <style scoped lang='scss'>

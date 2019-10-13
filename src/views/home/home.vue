@@ -1,21 +1,20 @@
 
 <template>
   <div class="home">
-    <header-top></header-top>
     <footer-top></footer-top>
 
-    <router-view/>
+    <container></container>
   </div>
 </template>
 
 <script>
-import headerTop from '@/components/header/head.vue'
 import footerTop from '@/components/footer/footer.vue'
+import container from '@/views/container/container.vue'
 export default {
   name: 'home',
   components: {
-    headerTop: headerTop,
-    footerTop: footerTop
+    footerTop: footerTop,
+    container: container
   }
 }
 </script>

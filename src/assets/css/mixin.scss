@@ -1,13 +1,11 @@
 $red: #f25657;
 $bc: #fff;
 $fc: #fff;
+$grey: #eeede9;
 
-@mixin bis($url) {
-    background-image: url($url);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-
+$font-red: #eb5153;
+$font-black: #474c52;
+$font-grey: #909090;
 @mixin borderRadius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -60,5 +58,27 @@ $fc: #fff;
     border-top: 1px solid $color;
 }
 
-// 图片处理
+// 左线
+@mixin bl-1px($color: #dcdcdc){
+    border-left: 1px solid $color;
+}
 
+// 右线
+@mixin br-1px($color: #dcdcdc){
+    border-right: 1px solid $color;
+}
+
+// 下线
+@mixin bb-1px($color: #dcdcdc){
+    border-bottom: 1px solid $color;
+}
+
+// 图片处理
+@mixin bis($name, $type) {
+    background-repeat: no-repeat;
+	background-size: 100% 100%;
+    background-image: url('../../assets/img/' + $name + '@2x.' + $type);
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+        background-image: url('../../assets/img/' + $name + '@3x.' + $type);
+    }
+}
