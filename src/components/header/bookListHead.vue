@@ -17,8 +17,10 @@
     </header>
 </template>
 <script>
+import mixins from '@/mixins/touch.js'
 export default {
-    name:'bookListHead'
+    name:'bookListHead',
+    mixins: [mixins]
 }
 </script>
 <style scoped lang='scss'>

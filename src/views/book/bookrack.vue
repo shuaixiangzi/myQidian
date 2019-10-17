@@ -2,9 +2,9 @@
     <div class="bookrack">
         <header-top></header-top>
         <advert></advert>
-        <ul class="book_list">
+        <ul class="book_list" @touchstart="touchstartHandle(bookInfo)" @touchend="touchendHandle" @click="bookDetal">
             <li>
-                <div class="cover update"><img src="../../assets/img/book.png"/></div>
+                <div class="cover update"><img data-bookid = "1" src="../../assets/img/book.png"/></div>
                 <p class="name">雪中悍刀行（全集）</p>
                 <p class="unread font-grey">1021章未读</p>
             </li>
@@ -15,14 +15,36 @@
 </template>
 
 <script>
+import touchHandle from '@/mixins/touch.js'
 import headerTop from '@/components/header/bookListHead.vue'
 import advert from '../advert/advert.vue'
 export default {
     name: 'bookrack',
+    mixins: [touchHandle],
     components:{
         headerTop: headerTop,
         advert:advert
-    }
+    },
+    data(){
+        return {
+
+        }
+    },
+    methods: {
+        // 展示
+        bookInfo(event){
+            let e = event || window.event;
+            console.log(event, window.event)
+            let id = e.target.dataset.bookid;
+            console.log(`显示id为 ${id}的书信息`);
+        },
+
+        // 前往书籍内容页
+        bookDetal(e){
+            let event = e || window.event;
+            console.log(222)
+        }
+    },
 }
 </script>
 
