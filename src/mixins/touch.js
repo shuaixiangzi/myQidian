@@ -4,7 +4,7 @@ export default {
         return{
             touchLoop:0,
             timing:0,
-            maxtime:3000
+            maxtime:2000
         }
     },
     methods: {
@@ -12,7 +12,7 @@ export default {
         touchstartHandle(callback, time){
             let e = event || window.event;
             let maxtime = time ? this.maxtime = time : this.maxtime;
-            this.timing = 0;
+            this.timing = 1000;
             this.touchLoop = setInterval(()=>{
                this.timing += 1000;
                console.log( this.timing, maxtime)

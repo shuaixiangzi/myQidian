@@ -11,38 +11,49 @@
         </ul>
 
         <router-link class="btn font-red" to="">查找更多精彩作品</router-link>
+
+        <book-set 
+          v-show="bool.bookSet"
+          @closeBookSet="closeBookSet"
+        ></book-set>
     </div>
 </template>
 
 <script>
 import touchHandle from '@/mixins/touch.js'
 import headerTop from '@/components/header/bookListHead.vue'
-import advert from '../advert/advert.vue'
+import advert from '@/views/advert/advert.vue'
+import bookSet from '@/views/book/children/bookSet.vue'
 export default {
     name: 'bookrack',
     mixins: [touchHandle],
     components:{
         headerTop: headerTop,
-        advert:advert
+        advert:advert,
+        bookSet:bookSet
     },
     data(){
         return {
-
+            bool:{
+                bookSet: false
+            }
         }
     },
     methods: {
         // 展示
         bookInfo(event){
-            let e = event || window.event;
-            console.log(event, window.event)
-            let id = e.target.dataset.bookid;
-            console.log(`显示id为 ${id}的书信息`);
+            let id = event.target.dataset.bookid;
+            this.bool.bookSet = true;
         },
 
         // 前往书籍内容页
         bookDetal(e){
             let event = e || window.event;
-            console.log(222)
+        },
+
+        // 关闭设置图书
+        closeBookSet(){
+            this.bool.bookSet = false;
         }
     },
 }
