@@ -14,7 +14,6 @@
 
         <book-set 
           v-show="bool.bookSet"
-          @closeBookSet="closeBookSet"
         ></book-set>
     </div>
 </template>
@@ -24,9 +23,10 @@ import touchHandle from '@/mixins/touch.js'
 import headerTop from '@/components/header/bookListHead.vue'
 import advert from '@/views/advert/advert.vue'
 import bookSet from '@/views/book/children/bookSet.vue'
+import emitter from '@/mixins/emitter.js'
 export default {
     name: 'bookrack',
-    mixins: [touchHandle],
+    mixins: [touchHandle, emitter],
     components:{
         headerTop: headerTop,
         advert:advert,
@@ -52,10 +52,14 @@ export default {
         },
 
         // 关闭设置图书
-        closeBookSet(){
+        closeSet(){
             this.bool.bookSet = false;
         }
     },
+
+    mounted() {
+        this.$on('closeBookSet',this.closeSet);
+    }
 }
 </script>
 

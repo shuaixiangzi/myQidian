@@ -2,6 +2,7 @@
   <div class="bookset">
       <div class="mask" @click="close"></div>
       <div class="detail">
+        <test></test>
         <div class="bookInfo">
           <div class="cover">
             <img src="../../../assets/img/book.png" alt=""/>
@@ -63,7 +64,7 @@
           </li>
           <li class="third">
             <div>
-              <img src=""/>
+              <img src="../../../assets/img/monthly_ticket.png"/>
               <p>投推荐票</p>
             </div>
             <div>
@@ -86,14 +87,17 @@
 
 <script>
 import qdSwitch from '@/components/common/qdSwitch.vue'
+import emitter from '@/mixins/emitter.js'
 export default {
   name: 'bookSet',
+  mixins: [emitter],
   components: {
     qdSwitch:qdSwitch
   },
   methods: {
     close(){
-      this.$emit('closeBookSet');
+      // this.$emit('closeBookSet');
+      this.dispatch('bookrack', 'closeBookSet');
     }
   },
   data() {
@@ -107,7 +111,7 @@ export default {
   },
 
   created(){
-    console.log(this.switchValue);
+    
   }
 }
 </script>
