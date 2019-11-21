@@ -1,8 +1,7 @@
 <template>
   <div class="qd-switch">
-    <svg class="svg-icon" aria-hidden="true">
-        <use :xlink:href="switchState"></use>
-    </svg>
+    <img src="../../assets/img/package/switch/switch_open.png" v-show="value"/>
+    <img src="../../assets/img/package/switch/switch_close.png" v-show="!value"/>
   </div>
 </template>
 
@@ -28,11 +27,10 @@ export default {
 }
 </script>
 
-<style>
-.svg-icon {
-    width: 1em; height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
+<style lang="scss" scoped>
+.qd-switch {
+    img{
+        width: 95px;
+    }   
 }
-</style>
+</style>>

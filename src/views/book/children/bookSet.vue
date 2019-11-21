@@ -63,7 +63,7 @@
           </li>
           <li class="third">
             <div>
-              <icon-svg icon-class="icontuijian"></icon-svg>
+              <img src=""/>
               <p>投推荐票</p>
             </div>
             <div>
@@ -118,7 +118,6 @@ export default {
 .bookset{
   .detail{
     width: 100%;
-    height: 990px;
     background-color: #fff;
     padding: 44px;
     box-sizing: border-box;
