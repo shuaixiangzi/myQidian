@@ -6,8 +6,8 @@
         </div>
 
         <div class="title">
-            <router-link to="" class="title_href active">书架</router-link>
-            <router-link to="" class="title_href">关注</router-link>
+            <router-link to="/bookshelf" class="title_href" :class="{ active: $route.path === '/bookshelf' }">书架</router-link>
+            <router-link to="/" class="title_href" :class="{ active: $route.path === '/' }">关注</router-link>
         </div>
 
         <div class="function">

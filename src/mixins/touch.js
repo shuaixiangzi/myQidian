@@ -15,7 +15,6 @@ export default {
             this.timing = 1000;
             this.touchLoop = setInterval(()=>{
                this.timing += 1000;
-               console.log( this.timing, maxtime)
                if( this.timing >= maxtime){
                    clearTimeout(this.touchLoop);
                    callback(e);

@@ -5,7 +5,9 @@ import Router from 'vue-router'
 /* const home = () => import('./views/home/home.vue'); */
 import home from'./views/home/home.vue';
 import container from './views/container/container.vue';
+import bookList from './views/book/bookList.vue';
 import bookrack from './views/book/bookrack.vue';
+import bookDetail from './views/book/bookDetail.vue';
 
 Vue.use(Router)
 
@@ -25,8 +27,18 @@ export default new Router({
           children: [
             {
               path: '',
+              name: 'bookList',
+              component: bookList
+            },
+            {
+              path: 'bookshelf',
               name: 'bookrack',
               component: bookrack
+            },
+            {
+              path: 'book/:id',
+              name: 'bookDetail',
+              component: bookDetail
             }
           ]
         }
