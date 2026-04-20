@@ -41,14 +41,14 @@ export default {
     },
     methods: {
         // 展示
-        bookInfo(event){
-            let id = event.target.dataset.bookid;
+        bookInfo(){
             this.bool.bookSet = true;
         },
 
         // 前往书籍内容页
         bookDetal(e){
             let event = e || window.event;
+            if (event && event.preventDefault) event.preventDefault();
         },
 
         // 关闭设置图书
